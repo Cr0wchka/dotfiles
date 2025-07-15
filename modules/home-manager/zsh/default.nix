@@ -27,9 +27,10 @@
 
       # Aliases
       shellAliases = {
-        nv = "nvim";
+        v = "nvim";
         icat = "kitten icat";
        	rebuild = "doas nixos-rebuild switch --flake /etc/nixos";
+        sudo = "doas";
       };
 
       # Use built-in plugin options
