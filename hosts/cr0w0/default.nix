@@ -68,8 +68,9 @@
   networking = {
     hostName = "nixos";
     networkmanager.enable = true;
+    nftables.enable = true;
   };
-
+  
   #----------------------------------------------------------------------------#
   # SYSTEM SETTINGS                                                            #
   #----------------------------------------------------------------------------#
@@ -140,7 +141,7 @@
     rtkit.enable = true;
     polkit.enable = true;
     doas.enable = true;
-    sudo.enable = false;
+    sudo.enable = true;
     doas.extraRules = [{
     users = ["cr0w0"];
     keepEnv = true;

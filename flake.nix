@@ -23,9 +23,14 @@
     url = "github:Gerg-L/spicetify-nix";
     inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    textfox = {
+     url = "github:adriankarlen/textfox";
+     inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, stylix, zen-browser, spicetify-nix }:
+  outputs = inputs@{ self, nixpkgs, home-manager, stylix, zen-browser, spicetify-nix, textfox }:
   {
     nixosConfigurations = {
       "nixos" = nixpkgs.lib.nixosSystem {
@@ -63,8 +68,10 @@
                   ./modules/home-manager/yazi/default.nix
                   ./modules/home-manager/starship/default.nix
                   ./modules/home-manager/zsh/default.nix
-                  ./modules/home-manager/fastfetch/default.nix
                   ./modules/home-manager/spicetify/default.nix
+                  textfox.homeManagerModules.default
+                  ./modules/home-manager/textfox/default.nix
+                  ./modules/home-manager/firefox/default.nix
                   stylix.homeModules.stylix
                   ./modules/home-manager/stylix/default.nix
                 ];

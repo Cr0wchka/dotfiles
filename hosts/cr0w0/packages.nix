@@ -25,7 +25,7 @@
     # Terminal Utilities
     kitty        # GPU-accelerated terminal emulator
     fzf          # command-line fuzzy finder
-    fastfetch    # system information tool
+    pfetch    # system information tool
     starship     # customizable shell prompt
     tmux         # terminal multiplexer
     btop         # resource monitor with graphs
@@ -34,6 +34,7 @@
     jq           # command-line JSON processor
     unzip        # zip file extraction utility
     tree         # directory listing
+    tamzen
     # File Management
     nemo         # graphical file manager
     yazi         # terminal file manager
